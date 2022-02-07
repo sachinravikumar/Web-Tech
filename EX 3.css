@@ -1,0 +1,153 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1c4477;
+  width: 100vw;
+  height: 20vh;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  left: 25%;
+}
+
+#social-icons {
+  background-color: rgb(168, 210, 223);
+  padding: 10px;
+}
+
+#social-icons a img {
+  width: 32px;
+  height: 32px;
+}
+
+nav {
+  background-color: rgb(90, 168, 199);
+  display: inline-block;
+  width: calc(100vw - 37px);
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: black;
+  margin-right: 8vw;
+  margin-left: 8vw;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#main-section {
+  background-image: url("https://bsmedia.business-standard.com/_media/bs/img/article/2017-04/24/full/1493032962-4018.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#main-section div p {
+  margin-left: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 30px 50px 0 50px;
+  width: 40vw;
+  /* height: 300px; */
+  background-color: #74bfeb;
+  border-style: dotted;
+  border-color: black;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#store {
+  display: flex;
+  justify-content: space-between;
+  background-color: #c0c0c0;
+  position: relative;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#store .item {
+  margin: 10px;
+}
+
+#store .item img {
+  width: 400px;
+  height: 300px;
+}
+
+#store .item:nth-child(1) {
+  background-color: #484091;
+}
+
+#store .item:nth-child(2) {
+  background-color: #458b97;
+}
+
+#store .item:nth-child(3) {
+  background-color: #c2faa1;
+}
+
+
+}
+
+#store .item h2 {
+  /* position: absolute; */
+  bottom: 15%;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+#store .item hr {
+  border: 1px solid red;
+}
+
+#family-section {
+  background-image: url("greg-rosenke-6QnEf_b47eA-unsplash.jpg");
+  /* background-size: 100vw 100vh; */
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#family-section .family-item .center-img {
+  text-align: center;
+}
+
+#family-section .family-item p {
+  width: 300px;
+}
+
+#family-section .family-item h3 {
+  color: rgb(0, 255, 0);
+}
+
+#family-section .family-item p {
+  color: white;
+}
+
+#family-section .family-item img {
+  border-radius: 100%;
+  /* background-color: white; */
+  width: 200px;
+  height: 200px;
+}
+
+footer {
+  padding: 20px 0 40px 20px;
+  background-color: #ffe4c4;
+}
+
+footer p {
+  margin: 0px;
+  font-weight: bold;
+  font-style: oblique;
+}
