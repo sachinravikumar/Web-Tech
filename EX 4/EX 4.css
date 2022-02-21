@@ -17,8 +17,9 @@ header {
 
 header h1{
   padding-right: 175px;
-  padding-top: 150px;
+  padding-top: 50px;
  color: rgb(59, 70, 73);
+
 }
 
 nav {
@@ -50,7 +51,8 @@ nav a {
   background-image: linear-gradient(grey, rgb(10, 204, 230));
   background-size: 100% 140%;
   background-repeat: no-repeat;
-  padding-left: 30vw;
+  padding-left: 40vw;
+  
 }
 
 
