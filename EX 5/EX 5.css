@@ -1,0 +1,21 @@
+html{
+    background-image: linear-gradient(cyan,green);
+    }
+    
+    div {
+        margin: 10px;
+        padding: 20px;
+        border: black;
+        border-style: solid;
+    }
+    
+    h1{
+        padding:20px;
+        color: grey;
+        font-style: oblique;
+    }
+    
+    div h1{
+        color: black;
+    }
+    
