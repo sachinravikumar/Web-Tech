@@ -13,7 +13,7 @@
 <body>
     <style>
         body {
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            font-family: sans-serif;
         }
 
         #time {
@@ -31,7 +31,7 @@
     <div id="time"></div>
 
     <div id="car-block">
-        <img id="car-image" style="position: relative; left: 0px;" src="pngwing.com.png" alt="Car" widht="100px"
+        <img id="car-image" style="position: relative; left: 0px;" src="car_icon.png" alt="Car" widht="100px"
             height="100px">
         <input type="button" id="move" value="Move">
         <input type="button" id="stop" value="Stop">
@@ -40,7 +40,7 @@
     <br>
 
     <div id="objects">
-        <table id="obj-table" border="2">
+        <table id="obj-table" border="1">
             <thead>
                 <td>Name</td>
                 <td>Reg</td>
@@ -66,40 +66,41 @@
             const minute = date.getMinutes();
             const seconds = date.getSeconds();
 
-            document.getElementById("time").innerHTML = `${hour}:${minute}:${seconds}`;
+            document.getElementById("time").innerHTML = `<${hour}:${minute}:${seconds}`;
 
         }, 1000);
 
         setInterval(() => {
             document.querySelector("html").style.backgroundColor = getColor();
-        }, 30000);
+        }, 3000);
 
         const inc = () => document.getElementById("title").style.fontSize = "50px";
         const dec = () => document.getElementById("title").style.fontSize = "10px";
 
         let movement;
         let speed = 10;
-        const car = document.getElementById("car-image");
+        let isMoving = false;
+
         const move = () => {
+            const car = document.getElementById("car-image");
             movement = setInterval(() => {
-                if (parseInt(car.style.left) >= (window.screen.availWidth)/2) {
+                if (parseInt(car.style.left) >= window.screen.availWidth) {
                     car.style.left = "0px";
                 }
                 car.style.left = parseInt(car.style.left) + 1 + "px";
             }, speed);
         }
-        
-        const stop = () =>{
-            const car =  document.getElementById("car-image");
-            stop = setInterval(() => {
-                car.style = car.style;
-            },speed);
 
         document.getElementById("move").addEventListener("click", (e) => {
+            if (isMoving) return;
+            isMoving = true;
             move();
         });
 
-        document.getElementById("stop").addEventListener("click", (e) => clearInterval(movement));
+        document.getElementById("stop").addEventListener("click", (e) => {
+            isMoving = false;
+            clearInterval(movement);
+        });
         document.getElementById("accelerator").addEventListener(
             "input",
             (e) => {
@@ -116,7 +117,7 @@
         // Q5
         const objects = [
             { name: "Sachin", reg: "URK19CS2009", dob: new Date(2002, 3, 18), },
-            { name: "Shivnesh", reg: "URK19CS2018", dob: new Date(2001, 8, 25), },
+            { name: "Shivnesh", reg: "URK19CS2018", dob: new Date(2001, 9, 25), },
             { name: "Hiruthic", reg: "URK19CS2017", dob: new Date(2002, 1, 15), },
         ];
 
