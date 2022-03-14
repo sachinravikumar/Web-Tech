@@ -79,9 +79,8 @@
 
         let movement;
         let speed = 10;
-
+        const car = document.getElementById("car-image");
         const move = () => {
-            const car = document.getElementById("car-image");
             movement = setInterval(() => {
                 if (parseInt(car.style.left) >= (window.screen.availWidth)/2) {
                     car.style.left = "0px";
@@ -89,6 +88,12 @@
                 car.style.left = parseInt(car.style.left) + 1 + "px";
             }, speed);
         }
+        
+        const stop = () =>{
+            const car =  document.getElementById("car-image");
+            stop = setInterval(() => {
+                car.style = car.style;
+            },speed);
 
         document.getElementById("move").addEventListener("click", (e) => {
             move();
