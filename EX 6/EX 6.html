@@ -83,7 +83,7 @@
         const move = () => {
             const car = document.getElementById("pngwing.com.png");
             movement = setInterval(() => {
-                if (parseInt(car.style.left) >= (window.screen.availWidth/2)) {
+                if (parseInt(car.style.left) >= (window.screen.availWidth)/2) {
                     car.style.left = "0px";
                 }
                 car.style.left = parseInt(car.style.left) + 1 + "px";
